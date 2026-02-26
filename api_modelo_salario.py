@@ -21,9 +21,9 @@ def predict(data: request_body):
         'nivel_na_empresa': data.nivel_na_empresa
     }
     
-     pred_df = pd.DataFrame(input_features, index=[1])
+    pred_df = pd.DataFrame(input_features, index=[1])
 
-     # Predição   
-     y_pred = modelo_poly.predict(pred_df)[0].astype(float)
+    # Predição   
+    y_pred = modelo_poly.predict(pred_df)[0].astype(float)
 
-     return {'salario_em_reais': y_pred.tolist()}
+    return {'salario_em_reais': y_pred.tolist()}
